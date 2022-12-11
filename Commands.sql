@@ -13,6 +13,7 @@
 
 -- ----------------------------------------------------------------
 
+-- Database Related Commands
 
 -- Show Databases 
 SHOW DATABASES;
@@ -20,5 +21,6 @@ SHOW DATABASES;
 -- Select a database to work with
 USE database_name;
 
--- Show tables in a Database
-SHOW TABLES;
+-- Create Database
+
+CREATE DATABASE database_name;
