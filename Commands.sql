@@ -22,5 +22,4 @@ SHOW DATABASES;
 USE database_name;
 
 -- Create Database
-
 CREATE DATABASE database_name;
