@@ -51,6 +51,14 @@
         attribute_name_4 VARCHAR        
     );
 
+    /* Database Constraints
+        PRIMARY KEY
+        FOREIGN KEY
+        UNIQUE KEY
+        CHECK
+        NOT NULL
+        DEFAULT
+    */
 
 -- Create Table - With Primary Key constraints  # Method 1
     CREATE TABLE table_name (
