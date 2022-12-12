@@ -1,14 +1,18 @@
---Comments in MySql
---   Single Line Comments
---       #   This comment continues to the end of line
---       --  This comment continues to the end of line
---       
---   Inline Comments
---       SELECT * FROM /* This is a inline comment*/ students;
---
---   Multi Line comments
---   /* multiple line comments  */       
---
+/*-- ----------------------------------------------------------------
+                    Comments in MYSQL
+--------------------------------------------------------------------*/
+
+--  Single Line Comments
+      #   This comment continues to the end of line
+      --  This comment continues to the end of line
+       
+--  Inline Comments
+       SELECT * FROM /* This is a inline comment*/ students;
+
+--  Multi Line comments
+        /*  multiple 
+            line 
+            comments  */       
 
 
 /*-- ----------------------------------------------------------------
@@ -30,7 +34,6 @@
 
 -- Rename Database
     #No Commands
-
 
 
 /*-- ----------------------------------------------------------------
