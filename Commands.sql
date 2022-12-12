@@ -11,15 +11,24 @@
 --
 
 
--- ----------------------------------------------------------------
+/*-- ----------------------------------------------------------------
+                    Database Related Commands
+--------------------------------------------------------------------*/
 
--- Database Related Commands
-
--- Show Databases 
-SHOW DATABASES;
+-- Show databases 
+    SHOW DATABASES;
 
 -- Select a database to work with
-USE database_name;
+    USE database_name;
 
--- Create Database
-CREATE DATABASE database_name;
+-- Create database
+    CREATE DATABASE database_name;
+
+-- Drop Database
+    DROP DATABASE database_name;
+
+
+-- Rename Database
+    #No Commands
+
+/*-------------------------------------------------------------------*/
