@@ -2,17 +2,17 @@
                     Comments in MYSQL
 --------------------------------------------------------------------*/
 
---  Single Line Comments
-      #   This comment continues to the end of line
-      --  This comment continues to the end of line
+--Single Line Comments
+    #   This comment continues to the end of line
+    --  This comment continues to the end of line
        
---  Inline Comments
-       SELECT * FROM /* This is a inline comment*/ students;
+--Inline Comments
+    SELECT * FROM /* This is a inline comment*/ students;
 
---  Multi Line comments
-        /*  multiple 
-            line 
-            comments  */       
+--Multi Line comments
+    /*  multiple 
+        line 
+        comments  */       
 
 
 /*-- ----------------------------------------------------------------
@@ -30,7 +30,6 @@
 
 -- Drop Database
     DROP DATABASE database_name;
-
 
 -- Rename Database
     #No Commands
@@ -60,7 +59,7 @@
         DEFAULT
     */
 
--- Create Table - With Primary Key constraints  # Method 1
+-- Create Table - With PRIMARY KEY constraints  # Method 1
     CREATE TABLE table_name (
         attribute_name_1 INT PRIMARY KEY,
         attribute_name_2 VARCHAR,
@@ -68,7 +67,7 @@
         attribute_name_4 VARCHAR        
     );
 
--- Create Table - With Primary Key constraints  # Method 2
+-- Create Table - With PRIMARY KEY constraints  # Method 2
     CREATE TABLE table_name (
         attribute_name_1 INT,
         attribute_name_2 VARCHAR,
@@ -77,7 +76,7 @@
         PRIMARY KEY(attribute_name_1)        
     );
 
--- Create Table - With Composite Primary Key constraints 
+-- Create Table - With Composite PRIMARY KEY constraints 
     CREATE TABLE table_name (
         attribute_name_1 INT,
         attribute_name_2 VARCHAR,
@@ -86,7 +85,7 @@
         PRIMARY KEY(attribute_name_2, attribute_name_3)        
     );
 
--- Create Table - With Foreign Key constraints 
+-- Create Table - With FOREIGN KEY constraints 
     CREATE TABLE table_1 (
         tb_1_pk INT,
         attribute_name_2 VARCHAR,
@@ -97,5 +96,35 @@
         CONSTRAINT(fk_cons) FOREIGN KEY(tb_2_pk)  REFERENCES table_2(tb_2_pk)    
     );
 
+-- Create Table - With UNIQUE constraints 
+    CREATE TABLE table_1 (
+        attribute_name_1 INT UNIQUE,
+        attribute_name_2 VARCHAR,
+        attribute_name_3 DATE,
+        attribute_name_4 VARCHAR,
+    );
 
-   
+ -- Create Table - With CHECK constraints 
+    CREATE TABLE table_1 (
+        attribute_name_1 INT CHECK (attribute_name_1 > 50),
+        attribute_name_2 VARCHAR,
+        attribute_name_3 DATE,
+        attribute_name_4 VARCHAR,
+    );
+  
+   -- Create Table - With NOT NULL constraints 
+    CREATE TABLE table_1 (
+        attribute_name_1 INT,
+        attribute_name_2 VARCHAR NOT NULL,
+        attribute_name_3 DATE,
+        attribute_name_4 VARCHAR,
+    );
+  
+     -- Create Table - With DEFAULT constraints 
+    CREATE TABLE table_1 (
+        attribute_name_1 INT,
+        attribute_name_2 VARCHAR DEFAULT 'default_value',
+        attribute_name_3 DATE,
+        attribute_name_4 VARCHAR,
+    );
+  
