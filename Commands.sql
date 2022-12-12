@@ -104,7 +104,7 @@
         attribute_name_4 VARCHAR,
     );
 
- -- Create Table - With CHECK constraints 
+-- Create Table - With CHECK constraints 
     CREATE TABLE table_1 (
         attribute_name_1 INT CHECK (attribute_name_1 > 50),
         attribute_name_2 VARCHAR,
@@ -112,19 +112,19 @@
         attribute_name_4 VARCHAR,
     );
   
-   -- Create Table - With NOT NULL constraints 
+-- Create Table - With NOT NULL constraints 
     CREATE TABLE table_1 (
         attribute_name_1 INT,
         attribute_name_2 VARCHAR NOT NULL,
         attribute_name_3 DATE,
         attribute_name_4 VARCHAR,
     );
-  
-     -- Create Table - With DEFAULT constraints 
+
+-- Create Table - With DEFAULT constraints 
     CREATE TABLE table_1 (
         attribute_name_1 INT,
         attribute_name_2 VARCHAR DEFAULT 'default_value',
         attribute_name_3 DATE,
         attribute_name_4 VARCHAR,
     );
-  
+    
