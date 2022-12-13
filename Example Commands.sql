@@ -52,7 +52,8 @@
         FOREIGN KEY(x_id)  REFERENCES parent(parent_id)    
     );
 
-    ALTER TABLE student_3 ADD phone VARCHAR(10) NOT NULL;
+    ALTER TABLE student_3 
+        ADD phone VARCHAR(10) NOT NULL;
 
 
     ALTER TABLE student_3 
@@ -60,3 +61,20 @@
         ADD address VARCHAR(25),
         ADD city VARCHAR(25),
         ADD parentname VARCHAR(50);
+
+    ALTER TABLE student_3 
+        MODIFY student_name INT;
+
+    ALTER TABLE student_3 
+        MODIFY student_name VARCHAR(40) NOT NULL,
+        MODIFY phone INT NOT NULL;
+
+    ALTER TABLE student_3
+        CHANGE COLUMN studentname student_name INT;
+
+    ALTER TABLE student_3
+        RENAME COLUMN student_name TO studentname;
+
+    ALTER TABLE student_3
+        DROP COLUMN city,
+        DROP COLUMN phone;

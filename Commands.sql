@@ -130,8 +130,11 @@
     
 
  -- ALTER TABLE - Add single column
-    ALTER TABLE table_name ADD new_attribute_name INT;
-    ALTER TABLE table_name ADD new_attribute_name INT NOT NULL;
+    ALTER TABLE table_name 
+        ADD new_attribute_name INT;
+    
+    ALTER TABLE table_name 
+        ADD new_attribute_name INT NOT NULL;
 
 -- ALTER TABLE - Add multiple columns
     ALTER TABLE table_name 
@@ -140,7 +143,8 @@
         ADD new_attribute_name_3 INT;
 
 -- ALTER TABLE - Modify Single Column - Data Type
-    ALTER TABLE table_name MODIFY attribute_name VARCHAR NOT NULL;
+    ALTER TABLE table_name 
+        MODIFY attribute_name VARCHAR NOT NULL;
 
 -- ALTER TABLE - Modify Multiple Columns - Data Type
     ALTER TABLE table_name 
@@ -149,3 +153,34 @@
         MODIFY attribute_name_3 INT NOT NULL;
 
 -- ALTER TABLE - Modify Column - Column Name
+    
+    #CHANGE
+
+    ALTER TABLE table_name
+        CHANGE COLUMN old_attribute_name new_attribute_name VARCHAR();
+
+    ALTER TABLE table_name
+        CHANGE COLUMN old_attribute_name_1 new_attribute_name_1 VARCHAR(),
+        CHANGE COLUMN old_attribute_name_2 new_attribute_name_2 VARCHAR(),
+        CHANGE COLUMN old_attribute_name_3 new_attribute_name_3 VARCHAR();
+
+    #RENAME
+
+    ALTER TABLE table_name
+        RENAME COLUMN old_attribute_name TO new_attribute_name;
+    
+    ALTER TABLE table_name
+        RENAME COLUMN old_attribute_name_1 TO new_attribute_name_1,
+        RENAME COLUMN old_attribute_name_2 TO new_attribute_name_2,
+        RENAME COLUMN old_attribute_name_3 TO new_attribute_name_3;
+
+
+    -- ALTER TABLE - DROP COLUMN
+
+    ALTER TABLE table_name 
+        DROP COLUMN attribute_name;
+
+    ALTER TABLE table_name 
+        DROP COLUMN attribute_name_1,
+        DROP COLUMN attribute_name_2,
+        DROP COLUMN attribute_name_3;
