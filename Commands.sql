@@ -93,7 +93,7 @@
         attribute_name_4 VARCHAR,
         tb_2_pk VARCHAR,
         PRIMARY KEY(tb_1_pk), 
-        CONSTRAINT(fk_cons) FOREIGN KEY(tb_2_pk)  REFERENCES table_2(tb_2_pk)    
+        FOREIGN KEY(tb_2_pk)  REFERENCES table_2(tb_2_pk)    
     );
 
 -- Create Table - With UNIQUE constraints 
@@ -123,8 +123,29 @@
 -- Create Table - With DEFAULT constraints 
     CREATE TABLE table_1 (
         attribute_name_1 INT,
-        attribute_name_2 VARCHAR DEFAULT 'default_value',
+        attribute_name_2 VARCHAR DEFAULT default,
         attribute_name_3 DATE,
         attribute_name_4 VARCHAR,
     );
     
+
+ -- ALTER TABLE - Add single column
+    ALTER TABLE table_name ADD new_attribute_name INT;
+    ALTER TABLE table_name ADD new_attribute_name INT NOT NULL;
+
+-- ALTER TABLE - Add multiple columns
+    ALTER TABLE table_name 
+        ADD new_attribute_name_1 INT,
+        ADD new_attribute_name_2 INT,
+        ADD new_attribute_name_3 INT;
+
+-- ALTER TABLE - Modify Single Column - Data Type
+    ALTER TABLE table_name MODIFY attribute_name VARCHAR NOT NULL;
+
+-- ALTER TABLE - Modify Multiple Columns - Data Type
+    ALTER TABLE table_name 
+        MODIFY attribute_name_1 INT NOT NULL,
+        MODIFY attribute_name_2 INT NOT NULL,
+        MODIFY attribute_name_3 INT NOT NULL;
+
+-- ALTER TABLE - Modify Column - Column Name
