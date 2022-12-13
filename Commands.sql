@@ -128,6 +128,9 @@
         attribute_name_4 VARCHAR,
     );
     
+-- Rename Table
+
+    RENAME old_table_name TO new_table_name;
 
  -- ALTER TABLE - Add single column
     ALTER TABLE table_name 
@@ -175,12 +178,27 @@
         RENAME COLUMN old_attribute_name_3 TO new_attribute_name_3;
 
 
-    -- ALTER TABLE - DROP COLUMN
+-- ALTER TABLE - DROP COLUMN
 
-    ALTER TABLE table_name 
-        DROP COLUMN attribute_name;
+ALTER TABLE table_name 
+    DROP COLUMN attribute_name;
 
-    ALTER TABLE table_name 
-        DROP COLUMN attribute_name_1,
-        DROP COLUMN attribute_name_2,
-        DROP COLUMN attribute_name_3;
+ALTER TABLE table_name 
+    DROP COLUMN attribute_name_1,
+    DROP COLUMN attribute_name_2,
+    DROP COLUMN attribute_name_3;
+
+
+-- ALTER TABLE - ADD PRIMARY KEY
+
+ALTER TABLE table_name
+    ADD PRIMARY KEY(attribute_name_1, attribute_name_2);
+
+-- ALTER TABLE - DROP PRIMARY KEY
+    ALTER TABLE table_name
+        DROP PRIMARY KEY;
+
+-- INSERT DATA
+
+    INSERT INTO table_name (c_name_1, c_name_2, c_name_3) 
+    VALUES (value_1, value_2, value_3);

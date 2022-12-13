@@ -78,3 +78,16 @@
     ALTER TABLE student_3
         DROP COLUMN city,
         DROP COLUMN phone;
+
+
+    CREATE TABLE basic (
+        id INT(3),
+        name VARCHAR (20),
+        phoneno VARCHAR(10)        
+    );
+
+    ALTER TABLE basic 
+        ADD PRIMARY KEY(id);
+
+    ALTER TABLE basic 
+        DROP PRIMARY KEY;
