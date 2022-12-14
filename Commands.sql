@@ -44,21 +44,24 @@
 
 -- CREATE TABLE 
    
--- Simple Table with NO constraints
-    CREATE TABLE table_name (
-        attribute_name_1 INT,
-        attribute_name_2 VARCHAR,
-        attribute_name_3 DATE,
-        attribute_name_4 VARCHAR        
-    );
+    -- Simple Table with NO constraints
+        CREATE TABLE table_name (
+            attribute_name_1 INT,
+            attribute_name_2 VARCHAR,
+            attribute_name_3 DATE,
+            attribute_name_4 VARCHAR        
+        );
 
-    /* Database Constraints
-        PRIMARY KEY
-        FOREIGN KEY
-        UNIQUE KEY
-        CHECK
-        NOT NULL
-        DEFAULT
+    -- Tables with constraints
+    
+    /*  
+          Database Constraints
+            [#] PRIMARY KEY
+            [#] FOREIGN KEY
+            [#] UNIQUE KEY
+            [#] CHECK
+            [#] NOT NULL
+            [#] DEFAULT
     */
 
     -- With PRIMARY KEY constraints
