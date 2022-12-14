@@ -93,6 +93,60 @@
         DROP PRIMARY KEY;
 
 
+    ALTER TABLE student_3 
+        ADD PRIMARY KEY(index_no);
 
-Hi_1
-Hi_2
+    ALTER TABLE student_3 
+        ADD CONSTRAINT PRIMARY KEY(index_no);
+
+    ALTER TABLE student_3
+        DROP PRIMARY KEY;
+
+    
+    ALTER TABLE t1
+        ADD FOREIGN KEY(abc) REFERENCES t2(index_no);
+
+    ALTER TABLE t1
+        ADD CONSTRAINT FOREIGN KEY(abc) REFERENCES t2(index_no);
+
+
+    ALTER TABLE t1
+        DROP FOREIGN KEY;
+
+    ALTER TABLE t5 
+        DROP CONSTRAINT FOREIGN KEY(abc) REFERENCES t6(index_no);
+    
+
+    CREATE TABLE t1 (
+        id INT(3), -- Primary Key
+        name VARCHAR (20),
+        abc INT(10)        
+    );
+
+    ALTER TABLE t1 
+        ADD PRIMARY KEY(id);
+
+    CREATE TABLE t2 (
+        index_no INT(3), #primary key
+        name VARCHAR (20),
+        phoneno VARCHAR(10)        
+    );
+
+    ALTER TABLE t2 
+        ADD CONSTRAINT PRIMARY KEY(index_no);
+
+
+
+
+    ALTER TABLE t1
+        ADD index_no INT;
+
+
+
+ALTER TABLE t5 DROP FOREIGN KEY xyz;
+
+
+
+INSERT INTO t6 VALUES
+    (6, 'bandara', 724),
+    (7, 'chandrasena',754);

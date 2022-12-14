@@ -42,45 +42,44 @@
 -- Show Tables
     SHOW TABLES;
 
-    /*----------------------------------
-                CREATE TABLE 
-    -----------------------------------*/
+-- CREATE TABLE 
+   
+-- Simple Table with NO constraints
+    CREATE TABLE table_name (
+        attribute_name_1 INT,
+        attribute_name_2 VARCHAR,
+        attribute_name_3 DATE,
+        attribute_name_4 VARCHAR        
+    );
 
-    -- Create Table - Simple Table with NO constraints
-        CREATE TABLE table_name (
-            attribute_name_1 INT,
-            attribute_name_2 VARCHAR,
-            attribute_name_3 DATE,
-            attribute_name_4 VARCHAR        
-        );
+    /* Database Constraints
+        PRIMARY KEY
+        FOREIGN KEY
+        UNIQUE KEY
+        CHECK
+        NOT NULL
+        DEFAULT
+    */
 
-        /* Database Constraints
-            PRIMARY KEY
-            FOREIGN KEY
-            UNIQUE KEY
-            CHECK
-            NOT NULL
-            DEFAULT
-        */
+    -- With PRIMARY KEY constraints
+        -- Method 01
+            CREATE TABLE table_name (
+                attribute_name_1 INT PRIMARY KEY,
+                attribute_name_2 VARCHAR,
+                attribute_name_3 DATE,
+                attribute_name_4 VARCHAR        
+            );
 
-    -- Create Table - With PRIMARY KEY constraints  # Method 1
-        CREATE TABLE table_name (
-            attribute_name_1 INT PRIMARY KEY,
-            attribute_name_2 VARCHAR,
-            attribute_name_3 DATE,
-            attribute_name_4 VARCHAR        
-        );
+        -- Method 2
+            CREATE TABLE table_name (
+                attribute_name_1 INT,
+                attribute_name_2 VARCHAR,
+                attribute_name_3 DATE,
+                attribute_name_4 VARCHAR,
+                PRIMARY KEY(attribute_name_1)        
+            );
 
-    -- Create Table - With PRIMARY KEY constraints  # Method 2
-        CREATE TABLE table_name (
-            attribute_name_1 INT,
-            attribute_name_2 VARCHAR,
-            attribute_name_3 DATE,
-            attribute_name_4 VARCHAR,
-            PRIMARY KEY(attribute_name_1)        
-        );
-
-    -- Create Table - With Composite PRIMARY KEY constraints 
+    -- With Composite PRIMARY KEY constraints 
         CREATE TABLE table_name (
             attribute_name_1 INT,
             attribute_name_2 VARCHAR,
@@ -89,7 +88,7 @@
             PRIMARY KEY(attribute_name_2, attribute_name_3)        
         );
 
-    -- Create Table - With FOREIGN KEY constraints 
+    -- With FOREIGN KEY constraints 
         CREATE TABLE table_1 (
             tb_1_pk INT,
             attribute_name_2 VARCHAR,
@@ -100,7 +99,7 @@
             FOREIGN KEY(tb_2_pk)  REFERENCES table_2(tb_2_pk)    
         );
 
-    -- Create Table - With UNIQUE constraints 
+    -- With UNIQUE constraints 
         CREATE TABLE table_1 (
             attribute_name_1 INT UNIQUE,
             attribute_name_2 VARCHAR,
@@ -108,14 +107,14 @@
             attribute_name_4 VARCHAR,
         );
 
-    -- Create Table - With CHECK constraints 
+    -- Wth CHECK constraints 
         CREATE TABLE table_1 (
             attribute_name_1 INT CHECK (attribute_name_1 > 50),
             attribute_name_2 VARCHAR,
             attribute_name_3 DATE,
             attribute_name_4 VARCHAR,
         );
-    
+
     -- Create Table - With NOT NULL constraints 
         CREATE TABLE table_1 (
             attribute_name_1 INT,
@@ -133,88 +132,148 @@
         );
     
 -- Rename Table
-
     RENAME old_table_name TO new_table_name;
 
-    /*----------------------------------
-                ALTER TABLE 
-    -----------------------------------*/
 
-        -- Add single column
-            ALTER TABLE table_name 
-                ADD new_attribute_name INT;
+--ALTER TABLE 
 
-            ALTER TABLE table_name 
-                ADD new_attribute_name INT NOT NULL;
+    -- Add single column
+        ALTER TABLE table_name 
+            ADD new_attribute_name INT;
 
-        -- Add multiple columns
-            ALTER TABLE table_name 
-                ADD new_attribute_name_1 INT,
-                ADD new_attribute_name_2 INT,
-                ADD new_attribute_name_3 INT;
+        ALTER TABLE table_name 
+            ADD new_attribute_name INT NOT NULL;
+
+    -- Add multiple columns
+        ALTER TABLE table_name 
+            ADD new_attribute_name_1 INT,
+            ADD new_attribute_name_2 INT,
+            ADD new_attribute_name_3 INT;
+    
+    -- DROP COLUMN
         
-        -- DROP COLUMN
+        # Single Column
+            ALTER TABLE table_name 
+                DROP COLUMN attribute_name;
+
+        # Multiple Column
+            ALTER TABLE table_name 
+                DROP COLUMN attribute_name_1,
+                DROP COLUMN attribute_name_2,
+                DROP COLUMN attribute_name_3;
+
+    --Modify ColumnData Type
+
+        # Single Column
+            ALTER TABLE table_name 
+                MODIFY attribute_name VARCHAR NOT NULL;
+
+        # Multiple Column
+            ALTER TABLE table_name 
+                MODIFY attribute_name_1 INT NOT NULL,
+                MODIFY attribute_name_2 INT NOT NULL,
+                MODIFY attribute_name_3 INT NOT NULL;
+
+
+    -- Modify Column - Column Name
+        
+        #CHANGE
+            ALTER TABLE table_name
+                CHANGE COLUMN old_attribute_name new_attribute_name VARCHAR();
+
+            ALTER TABLE table_name
+                CHANGE COLUMN old_attribute_name_1 new_attribute_name_1 VARCHAR(),
+                CHANGE COLUMN old_attribute_name_2 new_attribute_name_2 VARCHAR(),
+                CHANGE COLUMN old_attribute_name_3 new_attribute_name_3 VARCHAR();
+
+        #RENAME
+            ALTER TABLE table_name
+                RENAME COLUMN old_attribute_name TO new_attribute_name;
             
-            # Single Column
-                ALTER TABLE table_name 
-                    DROP COLUMN attribute_name;
-
-            # Multiple Column
-                ALTER TABLE table_name 
-                    DROP COLUMN attribute_name_1,
-                    DROP COLUMN attribute_name_2,
-                    DROP COLUMN attribute_name_3;
-
-        --Modify ColumnData Type
-
-            # Single Column
-                ALTER TABLE table_name 
-                    MODIFY attribute_name VARCHAR NOT NULL;
-
-            # Multiple Column
-                ALTER TABLE table_name 
-                    MODIFY attribute_name_1 INT NOT NULL,
-                    MODIFY attribute_name_2 INT NOT NULL,
-                    MODIFY attribute_name_3 INT NOT NULL;
+            ALTER TABLE table_name
+                RENAME COLUMN old_attribute_name_1 TO new_attribute_name_1,
+                RENAME COLUMN old_attribute_name_2 TO new_attribute_name_2,
+                RENAME COLUMN old_attribute_name_3 TO new_attribute_name_3;
 
 
-        -- Modify Column - Column Name
+    -- ADD CONSTRAINTS
+        
+        --PRIMARY KEY
+            -- Method 1
+             ALTER TABLE table_name
+                ADD PRIMARY KEY(attribute_name_1, attribute_name_2);
+          
+            -- Method 2
+              ALTER TABLE table_name
+                ADD CONSTRAINT PRIMARY KEY(attribute_name_1);     
+        
+        --PRIMARY KEY
+            ALTER TABLE table_name
+                ADD CONSTRAINT PRIMARY KEY(attribute_name_1, attribute_name_2);
+
+        -- UNIQUE
+            ALTER TABLE table_name
+                ADD CONSTRAINT UNIQUE(attribute_name_1);
+        
+        -- CHECK
+            ALTER TABLE table_name
+                ADD CONSTRAINT CHECK(attribute_name_1 > 100);
+
+        -- NOT NULL
+            ALTER TABLE table_name
+                ADD CONSTRAINT NOT NULL(attribute_name_1);
+
+        -- FORIGEN KEY
+            -- Method 1    
+            ALTER TABLE table_name
+                ADD FOREIGN KEY (column_name) 
+                REFERENCES other_table_name(other_table_attribute);
             
-            #CHANGE
-                ALTER TABLE table_name
-                    CHANGE COLUMN old_attribute_name new_attribute_name VARCHAR();
-
-                ALTER TABLE table_name
-                    CHANGE COLUMN old_attribute_name_1 new_attribute_name_1 VARCHAR(),
-                    CHANGE COLUMN old_attribute_name_2 new_attribute_name_2 VARCHAR(),
-                    CHANGE COLUMN old_attribute_name_3 new_attribute_name_3 VARCHAR();
-
-            #RENAME
-                ALTER TABLE table_name
-                    RENAME COLUMN old_attribute_name TO new_attribute_name;
-                
-                ALTER TABLE table_name
-                    RENAME COLUMN old_attribute_name_1 TO new_attribute_name_1,
-                    RENAME COLUMN old_attribute_name_2 TO new_attribute_name_2,
-                    RENAME COLUMN old_attribute_name_3 TO new_attribute_name_3;
+            -- Method 2    
+            ALTER TABLE table_name
+                ADD CONSTRAINT /*constraint_name*/ FOREIGN KEY (column_name) 
+                REFERENCES other_table_name(other_table_attribute);
 
 
-        -- ADD PRIMARY KEY
-
-        ALTER TABLE table_name
-            ADD PRIMARY KEY(attribute_name_1, attribute_name_2);
-
-        -- ALTER TABLE - DROP PRIMARY KEY
+    -- DROP CONSTRAINTS
+        
+        -- DROP PRIMARY KEY
             ALTER TABLE table_name
                 DROP PRIMARY KEY;
+        
+        -- DROP FOREIGN KEY
+            ALTER TABLE table_name
+                DROP FOREIGN KEY constraint_name;
 
-        -- Add Constraints
+        -- DROP
+ /*-- ----------------------------------------------------------------
+                    Table Data Related Commands
+--------------------------------------------------------------------*/       
 
-            --PRIMARY KEY
-
-            -- 
 
 -- INSERT DATA
 
-    INSERT INTO table_name (c_name_1, c_name_2, c_name_3) 
-    VALUES (value_1, value_2, value_3);
+    INSERT INTO table_name 
+        (column_name_1, column_name_2) 
+        VALUES 
+        (value_1,value_2);
+    
+    INSERT INTO table_name 
+        (column_name_1, column_name_2) 
+        VALUES 
+            (value_1.1,value_1.2),
+            (value_2.1,value_2.2),
+            (value_3.1,value_3.2);
+
+
+-- DELETE ROW
+
+    DELETE FROM table_name
+        WHERE (condition)
+
+
+    DELETE FROM t6
+        WHERE (index_no = 7);
+
+    
+    DELETE FROM t6 WHERE();
