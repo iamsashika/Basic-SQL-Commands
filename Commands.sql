@@ -132,71 +132,83 @@
 
     RENAME old_table_name TO new_table_name;
 
- -- ALTER TABLE - Add single column
-    ALTER TABLE table_name 
-        ADD new_attribute_name INT;
-    
-    ALTER TABLE table_name 
-        ADD new_attribute_name INT NOT NULL;
+    /*----------------------------------
+                ALTER TABLE 
+    -----------------------------------*/
 
--- ALTER TABLE - Add multiple columns
-    ALTER TABLE table_name 
-        ADD new_attribute_name_1 INT,
-        ADD new_attribute_name_2 INT,
-        ADD new_attribute_name_3 INT;
+        -- Add single column
+            ALTER TABLE table_name 
+                ADD new_attribute_name INT;
 
--- ALTER TABLE - Modify Single Column - Data Type
-    ALTER TABLE table_name 
-        MODIFY attribute_name VARCHAR NOT NULL;
+            ALTER TABLE table_name 
+                ADD new_attribute_name INT NOT NULL;
 
--- ALTER TABLE - Modify Multiple Columns - Data Type
-    ALTER TABLE table_name 
-        MODIFY attribute_name_1 INT NOT NULL,
-        MODIFY attribute_name_2 INT NOT NULL,
-        MODIFY attribute_name_3 INT NOT NULL;
+        -- Add multiple columns
+            ALTER TABLE table_name 
+                ADD new_attribute_name_1 INT,
+                ADD new_attribute_name_2 INT,
+                ADD new_attribute_name_3 INT;
+        
+        -- DROP COLUMN
+            
+            # Single Column
+                ALTER TABLE table_name 
+                    DROP COLUMN attribute_name;
 
--- ALTER TABLE - Modify Column - Column Name
-    
-    #CHANGE
+            # Multiple Column
+                ALTER TABLE table_name 
+                    DROP COLUMN attribute_name_1,
+                    DROP COLUMN attribute_name_2,
+                    DROP COLUMN attribute_name_3;
 
-    ALTER TABLE table_name
-        CHANGE COLUMN old_attribute_name new_attribute_name VARCHAR();
+        --Modify ColumnData Type
 
-    ALTER TABLE table_name
-        CHANGE COLUMN old_attribute_name_1 new_attribute_name_1 VARCHAR(),
-        CHANGE COLUMN old_attribute_name_2 new_attribute_name_2 VARCHAR(),
-        CHANGE COLUMN old_attribute_name_3 new_attribute_name_3 VARCHAR();
+            # Single Column
+                ALTER TABLE table_name 
+                    MODIFY attribute_name VARCHAR NOT NULL;
 
-    #RENAME
-
-    ALTER TABLE table_name
-        RENAME COLUMN old_attribute_name TO new_attribute_name;
-    
-    ALTER TABLE table_name
-        RENAME COLUMN old_attribute_name_1 TO new_attribute_name_1,
-        RENAME COLUMN old_attribute_name_2 TO new_attribute_name_2,
-        RENAME COLUMN old_attribute_name_3 TO new_attribute_name_3;
+            # Multiple Column
+                ALTER TABLE table_name 
+                    MODIFY attribute_name_1 INT NOT NULL,
+                    MODIFY attribute_name_2 INT NOT NULL,
+                    MODIFY attribute_name_3 INT NOT NULL;
 
 
--- ALTER TABLE - DROP COLUMN
+        -- Modify Column - Column Name
+            
+            #CHANGE
+                ALTER TABLE table_name
+                    CHANGE COLUMN old_attribute_name new_attribute_name VARCHAR();
 
-ALTER TABLE table_name 
-    DROP COLUMN attribute_name;
+                ALTER TABLE table_name
+                    CHANGE COLUMN old_attribute_name_1 new_attribute_name_1 VARCHAR(),
+                    CHANGE COLUMN old_attribute_name_2 new_attribute_name_2 VARCHAR(),
+                    CHANGE COLUMN old_attribute_name_3 new_attribute_name_3 VARCHAR();
 
-ALTER TABLE table_name 
-    DROP COLUMN attribute_name_1,
-    DROP COLUMN attribute_name_2,
-    DROP COLUMN attribute_name_3;
+            #RENAME
+                ALTER TABLE table_name
+                    RENAME COLUMN old_attribute_name TO new_attribute_name;
+                
+                ALTER TABLE table_name
+                    RENAME COLUMN old_attribute_name_1 TO new_attribute_name_1,
+                    RENAME COLUMN old_attribute_name_2 TO new_attribute_name_2,
+                    RENAME COLUMN old_attribute_name_3 TO new_attribute_name_3;
 
 
--- ALTER TABLE - ADD PRIMARY KEY
+        -- ADD PRIMARY KEY
 
-ALTER TABLE table_name
-    ADD PRIMARY KEY(attribute_name_1, attribute_name_2);
+        ALTER TABLE table_name
+            ADD PRIMARY KEY(attribute_name_1, attribute_name_2);
 
--- ALTER TABLE - DROP PRIMARY KEY
-    ALTER TABLE table_name
-        DROP PRIMARY KEY;
+        -- ALTER TABLE - DROP PRIMARY KEY
+            ALTER TABLE table_name
+                DROP PRIMARY KEY;
+
+        -- Add Constraints
+
+            --PRIMARY KEY
+
+            -- 
 
 -- INSERT DATA
 

@@ -91,3 +91,8 @@
 
     ALTER TABLE basic 
         DROP PRIMARY KEY;
+
+
+
+Hi_1
+Hi_2
