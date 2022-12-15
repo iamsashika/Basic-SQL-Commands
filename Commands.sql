@@ -290,6 +290,10 @@
     DELETE FROM table_name
         WHERE (condition);
 
+    -- Delete Rows with LIMIT
+
+    -- Delete Rows with ORDER BY and LIMIT
+
     -- Delete All Rows 
     DELETE FROM table_name;
 
