@@ -110,13 +110,24 @@
             attribute_name_4 VARCHAR,
         );
 
-    -- Wth CHECK constraints 
-        CREATE TABLE table_1 (
-            attribute_name_1 INT CHECK (attribute_name_1 > 50),
-            attribute_name_2 VARCHAR,
-            attribute_name_3 DATE,
-            attribute_name_4 VARCHAR,
-        );
+    -- Wth CHECK constraints
+        
+        -- Method 1        
+            CREATE TABLE table_1 (
+                attribute_name_1 INT CHECK (attribute_name_1 > 50),
+                attribute_name_2 VARCHAR,
+                attribute_name_3 DATE,
+                attribute_name_4 VARCHAR,
+            );
+
+        -- Method 2
+            CREATE TABLE table_1 (
+                attribute_name_1 INT,
+                attribute_name_2 VARCHAR,
+                attribute_name_3 DATE,
+                attribute_name_4 VARCHAR,
+                CHECK (attribute_name_1 > 50)
+            );
 
     -- Create Table - With NOT NULL constraints 
         CREATE TABLE table_1 (
@@ -208,7 +219,7 @@
           
             -- Method 2
               ALTER TABLE table_name
-                ADD CONSTRAINT PRIMARY KEY(attribute_name_1);     
+                ADD CONSTRAINT /*constraint_name*/ PRIMARY KEY(attribute_name_1);     
         
         --PRIMARY KEY
             ALTER TABLE table_name
@@ -216,7 +227,7 @@
 
         -- UNIQUE
             ALTER TABLE table_name
-                ADD CONSTRAINT UNIQUE(attribute_name_1);
+                ADD CONSTRAINT /*constraint_name*/ UNIQUE(attribute_name_1);
         
         -- CHECK
             ALTER TABLE table_name
@@ -224,7 +235,7 @@
 
         -- NOT NULL
             ALTER TABLE table_name
-                ADD CONSTRAINT NOT NULL(attribute_name_1);
+                ADD CONSTRAINT /*constraint_name*/ NOT NULL(attribute_name_1);
 
         -- FORIGEN KEY
             -- Method 1    
