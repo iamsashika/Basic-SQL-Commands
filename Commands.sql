@@ -140,7 +140,7 @@
     -- Create Table - With DEFAULT constraints 
         CREATE TABLE table_1 (
             attribute_name_1 INT,
-            attribute_name_2 VARCHAR DEFAULT default,
+            attribute_name_2 VARCHAR DEFAULT defaul_value,
             attribute_name_3 DATE,
             attribute_name_4 VARCHAR,
         );
@@ -266,12 +266,14 @@
 
 
 -- INSERT DATA
-
+    
+    -- Single Record
     INSERT INTO table_name 
         (column_name_1, column_name_2) 
         VALUES 
         (value_1,value_2);
-    
+        
+    -- Multiple Records
     INSERT INTO table_name 
         (column_name_1, column_name_2) 
         VALUES 
@@ -281,13 +283,10 @@
 
 
 -- DELETE ROW
-
-    DELETE FROM table_name
-        WHERE (condition)
-
-
-    DELETE FROM t6
-        WHERE (index_no = 7);
-
     
-    DELETE FROM t6 WHERE();
+    -- Delete Rows Conditionally
+    DELETE FROM table_name
+        WHERE (condition);
+
+    -- Delete All Rows 
+    DELETE FROM table_name;
