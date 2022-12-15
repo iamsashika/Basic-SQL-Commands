@@ -260,6 +260,8 @@
                 DROP FOREIGN KEY constraint_name;
 
         -- DROP
+
+        
  /*-- ----------------------------------------------------------------
                     Table Data Related Commands
 --------------------------------------------------------------------*/       
@@ -272,7 +274,7 @@
         (column_name_1, column_name_2) 
         VALUES 
         (value_1,value_2);
-        
+
     -- Multiple Records
     INSERT INTO table_name 
         (column_name_1, column_name_2) 
