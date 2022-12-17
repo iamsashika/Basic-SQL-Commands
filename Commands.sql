@@ -330,6 +330,14 @@ DROP UNIQUE constraint-name
     WHERE (condition)
     LIMIT row_count;
 
+    -- Update with ORDER BY and LIMIT
+    UPDATE table_name
+    SET column_1 = expression_1,
+        column_2 = expression_2
+    WHERE (condition)
+    ORDER BY column_name ASC | DESC
+    LIMIT row_count;
+
 
 
 -- SELECT ROW
