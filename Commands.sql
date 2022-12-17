@@ -254,12 +254,17 @@
         -- DROP PRIMARY KEY
             ALTER TABLE table_name
                 DROP PRIMARY KEY;
+    
         
         -- DROP FOREIGN KEY
             ALTER TABLE table_name
                 DROP FOREIGN KEY constraint_name;
+            
+            ALTER TABLE table_name DROP INDEX  id_name_fk;
 
-        -- DROP
+        -- DROP UNIQUE
+          ALTER TABLE table-name
+DROP UNIQUE constraint-name
 
 
 /*--------------------------------------------------------------------
@@ -291,6 +296,14 @@
         WHERE (condition);
 
     -- Delete Rows with LIMIT
+    DELETE FROM table_name
+        WHERE (condition)
+        LIMIT 5;
+    
+    -- Delete Rows with LIMIT
+    DELETE FROM table_name
+        WHERE (condition)
+        LIMIT 5;
 
     -- Delete Rows with ORDER BY and LIMIT
 
