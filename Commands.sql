@@ -263,8 +263,8 @@
             ALTER TABLE table_name DROP INDEX  id_name_fk;
 
         -- DROP UNIQUE
-          ALTER TABLE table-name
-DROP UNIQUE constraint-name
+            ALTER TABLE table-name
+                DROP UNIQUE constraint-name
 
 
 /*--------------------------------------------------------------------
@@ -319,24 +319,24 @@ DROP UNIQUE constraint-name
     
     -- Update rows with a condition
     UPDATE table_name
-    SET column_1 = expression_1,
-        column_2 = expression_2
-    WHERE (condition);
+        SET column_1 = expression_1,
+            column_2 = expression_2
+        WHERE (condition);
 
     -- Update with limit
     UPDATE table_name
-    SET column_1 = expression_1,
-        column_2 = expression_2
-    WHERE (condition)
-    LIMIT row_count;
+        SET column_1 = expression_1,
+            column_2 = expression_2
+        WHERE (condition)
+        LIMIT row_count;
 
     -- Update with ORDER BY and LIMIT
     UPDATE table_name
-    SET column_1 = expression_1,
-        column_2 = expression_2
-    WHERE (condition)
-    ORDER BY column_name ASC | DESC
-    LIMIT row_count;
+        SET column_1 = expression_1,
+            column_2 = expression_2
+        WHERE (condition)
+        ORDER BY column_name ASC | DESC
+        LIMIT row_count;
 
 
 
