@@ -293,7 +293,7 @@ DROP UNIQUE constraint-name
     
     -- Delete All Rows 
     DELETE FROM table_name;
-    
+
     -- Delete Rows Conditionally
     DELETE FROM table_name
         WHERE (condition);
@@ -314,10 +314,15 @@ DROP UNIQUE constraint-name
         ORDER BY column_name ASC | DESC
         LIMIT row_count;
 
-    
-
 
 -- UPDATE ROW
-
+    
+    -- Update rows with a condition
+    UPDATE table_name
+    SET column_1 = expression_1,
+        column_2 = expression_2,
+        ...
+    WHERE (condition);
+    
 
 -- SELECT ROW
