@@ -306,6 +306,10 @@ DROP UNIQUE constraint-name
         LIMIT 5;
 
     -- Delete Rows with ORDER BY and LIMIT
+    DELETE FROM table_name
+        WHERE (condition)
+        ORDER BY column_name ASC | DESC
+        LIMIT row_count;
 
     -- Delete All Rows 
     DELETE FROM table_name;
