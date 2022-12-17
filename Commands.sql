@@ -320,9 +320,16 @@ DROP UNIQUE constraint-name
     -- Update rows with a condition
     UPDATE table_name
     SET column_1 = expression_1,
-        column_2 = expression_2,
-        ...
+        column_2 = expression_2
     WHERE (condition);
-    
+
+    -- Update with limit
+    UPDATE table_name
+    SET column_1 = expression_1,
+        column_2 = expression_2
+    WHERE (condition)
+    LIMIT row_count;
+
+
 
 -- SELECT ROW
