@@ -346,3 +346,6 @@
 
     -- SELECT With Wher
         SELECT * FROM table_name WHERE (condition);
+
+    -- SELECT specific columns
+        SELECT column_name_1, column_name_2 FROM WHERE(condition);
