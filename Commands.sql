@@ -351,4 +351,6 @@
             WHERE (condition);
 
     -- SELECT specific columns
-        SELECT column_name_1, column_name_2 FROM WHERE(condition);
+        SELECT column_name_1, column_name_2 
+        FROM table_name
+        WHERE(condition);
