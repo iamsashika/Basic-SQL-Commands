@@ -341,3 +341,5 @@
 
 
 -- SELECT ROW
+    -- SELECT ALL
+        SELECT * FROM table_name;
