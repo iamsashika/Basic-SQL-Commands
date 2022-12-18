@@ -343,3 +343,6 @@
 -- SELECT ROW
     -- SELECT ALL
         SELECT * FROM table_name;
+
+    -- SELECT With Wher
+        SELECT * FROM table_name WHERE (condition);
