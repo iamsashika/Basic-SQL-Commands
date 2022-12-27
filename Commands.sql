@@ -343,7 +343,7 @@
 -- SELECT ROW
 
     /*--------------------------------------------------------------------
-                       SELECT STATEMENT                                 
+                            SELECT STATEMENT                              
      Syntax
         
         

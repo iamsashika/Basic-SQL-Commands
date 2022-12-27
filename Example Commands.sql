@@ -150,3 +150,48 @@ ALTER TABLE t5 DROP FOREIGN KEY xyz;
 INSERT INTO t6 VALUES
     (6, 'bandara', 724),
     (7, 'chandrasena',754);
+
+
+
+
+
+ CREATE TABLE student_mark (
+        id INT(3),
+        name VARCHAR (20),
+        mark INT(3),
+        PRIMARY KEY (id)        
+    );
+
+
+
+INSERT INTO student_mark 
+    (id, name, mark) 
+    VALUES
+        (1, 'A', 90),
+        (2, 'B', 85),
+        (3, 'C', 99),
+        (4, 'D', 78),
+        (5, 'E', 94);
+
+
+SELECT * 
+    FROM student_mark
+    WHERE mark >=90;
+
+SELECT * 
+    FROM student_mark
+    WHERE name = 'a';
+
+SELECT * 
+    FROM `student_mark`
+    WHERE name = 'a';
+
+SELECT * 
+    FROM `student_mark`
+    WHERE name = 'a';
+
+SELECT * 
+    FROM "student_mark"
+    WHERE name = 'a';
+
+    
