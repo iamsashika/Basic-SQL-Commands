@@ -194,4 +194,8 @@ SELECT *
     FROM "student_mark"
     WHERE name = 'a';
 
-    
+
+SELECT *
+    FROM student_mark
+    -- WHERE (condition)
+    ORDER BY mark ASC;
