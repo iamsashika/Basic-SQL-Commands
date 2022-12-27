@@ -195,6 +195,8 @@ SELECT *
     WHERE name = 'a';
 
 
+USE SCHOOL;
+
 SELECT *
     FROM student_mark
     -- WHERE (condition)
