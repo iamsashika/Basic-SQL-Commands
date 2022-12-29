@@ -197,7 +197,47 @@ SELECT *
 
 USE SCHOOL;
 
-SELECT *
+SELECT id, mark, `first name`
     FROM student_mark
     -- WHERE (condition)
     ORDER BY mark ASC;
+
+
+ CREATE TABLE `teacher info` (
+        id INT(3),
+        `first name` VARCHAR (20),
+        mark INT(3),
+        PRIMARY KEY (id)        
+    );
+
+DESC `teacher inf`;
+
+
+
+DROP table parent, `student`;
+
+
+
+
+CREATE TABLE `student` (
+        id INT(3),
+        name VARCHAR (20),
+        nic VARCHAR(20)        
+);
+
+
+
+
+CREATE TABLE `subject` (
+        code INT(3),
+        name VARCHAR (20)        
+);
+
+CREATE TABLE `mark` (
+        id INT(3),
+        code INT (3),
+        mark INT(3)        
+);
+
+
+SHOW TABLES;
