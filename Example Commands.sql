@@ -225,13 +225,35 @@ CREATE TABLE `student` (
         nic VARCHAR(20)        
 );
 
+INSERT INTO student 
+    (id, name, nic) 
+    VALUES
+        (1, 'dhanuka', 11),
+        (2, 'navith', 22),
+        (3, 'sashika', 33),
+        (4, 'chandrasena', 44),
+        (5, 'ilangarathne', 55);
 
+
+SELECT * FROM student;
 
 
 CREATE TABLE `subject` (
         code INT(3),
         name VARCHAR (20)        
 );
+
+INSERT INTO subject 
+    (code, name) 
+    VALUES
+        (100, 'maths'),
+        (200, 'science'),
+        (300, 'english'),
+        (400, 'sinhala'),
+        (500, 'ict');
+
+
+SELECT * FROM subject;
 
 CREATE TABLE `mark` (
         id INT(3),
@@ -240,4 +262,60 @@ CREATE TABLE `mark` (
 );
 
 
+INSERT INTO mark 
+    (id, code, mark) 
+    VALUES
+        (1, 100, 98),
+        (2, 100, 78),
+        (3, 100, 88),
+        (4, 100, 68),
+        (5, 100, 58),
+
+        (1, 200, 94),
+        (2, 200, 74),
+        (3, 200, 84),
+        (4, 200, 64),
+        (5, 200, 54),
+
+        (1, 300, 92),
+        (2, 300, 72),
+        (3, 300, 82),
+        (4, 300, 62),
+        (5, 300, 52);
+
+
+
+
+SELECT * FROM mark;
+
+DROP TABLE mark;
+
 SHOW TABLES;
+
+
+
+CREATE TABLE t1 (
+        ca VARCHAR(5),
+        cb VARCHAR(5),
+        cc VARCHAR(5)        
+);
+
+INSERT INTO t1 
+ 
+    VALUES
+        ('a1', 'b1', 'c1'),
+        ('a2', 'b2', 'c2'),
+        ('a3', 'b3', 'c3');
+
+
+
+CREATE TABLE t2 (
+        cx VARCHAR(5),
+        cy VARCHAR(5)        
+);
+
+INSERT INTO t2
+ 
+    VALUES
+        ('x1', 'y1'),
+        ('x2', 'y2');
