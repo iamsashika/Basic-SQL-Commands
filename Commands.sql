@@ -419,7 +419,8 @@
 -- SUM()
     SELECT column_name_1, SUM(column_name_2)
        FROM table_name;
-       
--- MIN()
 
+-- MIN()
+    SELECT column_name_1, MIN(column_name_2)
+       FROM table_name;
 -- MAX()
