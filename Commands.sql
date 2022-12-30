@@ -413,7 +413,8 @@
        FROM table_name;
 
 -- COUNT()
-    
+    SELECT column_name_1, COUNT(column_name_2)
+       FROM table_name;
 -- SUM()
 
 -- MIN()
