@@ -423,4 +423,7 @@
 -- MIN()
     SELECT column_name_1, MIN(column_name_2)
        FROM table_name;
+
 -- MAX()
+    SELECT column_name_1, MAX(column_name_2)
+       FROM table_name;
