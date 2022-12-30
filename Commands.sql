@@ -415,8 +415,11 @@
 -- COUNT()
     SELECT column_name_1, COUNT(column_name_2)
        FROM table_name;
--- SUM()
 
+-- SUM()
+    SELECT column_name_1, SUM(column_name_2)
+       FROM table_name;
+       
 -- MIN()
 
 -- MAX()
