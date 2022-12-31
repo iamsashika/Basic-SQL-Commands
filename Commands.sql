@@ -398,7 +398,13 @@
 
     -- SELECT with distinct rows
 
-        SELECT 
+        SELECT DISTINCT column_name_1, column_name_2
+            FROM
+                table_name
+            WHERE 
+                search_condition
+            ORDER BY 
+                sort_expression;
 
 
 
