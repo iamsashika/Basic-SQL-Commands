@@ -381,6 +381,8 @@
         }
     --------------------------------------------------------------------*/
 
+    -- Operation Order
+        -- FROM -> WHERE -> GROUP BY -> HAVING->  SELECT -> DISTINCT -> ORDER BY -> LIMIT
 
     -- SELECT ALL
         SELECT * 
@@ -397,7 +399,6 @@
             WHERE(condition);
 
     -- SELECT with distinct rows
-
         SELECT DISTINCT column_name_1, column_name_2
             FROM
                 table_name
