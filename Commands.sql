@@ -398,14 +398,29 @@
             FROM table_name
             WHERE(condition);
 
+    -- SELECT with GROUP BY
+        
+        SELECT 
+            column_name_1, column_name_2
+        FROM 
+            table_name
+        WHERE 
+            condition
+        GROUP BY 
+            group_by_expression;
+    
+      
+
     -- SELECT with distinct rows
+        
         SELECT DISTINCT column_name_1, column_name_2
-            FROM
-                table_name
-            WHERE 
-                search_condition
-            ORDER BY 
-                sort_expression;
+        
+        FROM
+            table_name
+        WHERE 
+            search_condition
+        ORDER BY 
+            sort_expression;
 
 
 
