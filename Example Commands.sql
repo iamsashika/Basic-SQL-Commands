@@ -375,4 +375,45 @@ SET
 WHERE
     id = 5;
 
-    
+
+
+
+# JOINS
+
+    CREATE TABLE student (
+        s_id INT(5),
+        s_name VARCHAR(10),
+        d_id INT(5)
+    );
+
+    INSERT INTO student 
+ 
+    VALUES
+        (1,'dhanuka', 10),
+        (2,'navith', 20),
+        (3,'sashika', 30),
+        (4,'sahan', 10),
+        (5,'nimal',  20),
+        (6,'kamal', 80),
+        (7,'sunil', 90);
+
+    CREATE TABLE department (
+        d_id INT(5),
+        d_name VARCHAR(10)
+    );
+
+    INSERT INTO department 
+        VALUES
+        (10,'A'),
+        (20,'B'),
+        (30,'C'),
+        (40,'D'),
+        (50,'E');
+
+    SELECT 
+        * 
+    FROM 
+        student
+    INNER JOIN
+        department
+    ON student.d_id = department.d_id;  
