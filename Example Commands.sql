@@ -319,3 +319,60 @@ INSERT INTO t2
     VALUES
         ('x1', 'y1'),
         ('x2', 'y2');
+
+
+
+CREATE TABLE student (
+        id INT(5),
+        name VARCHAR(10),
+        grade VARCHAR(10),
+        mark INT(5),
+        subject VARCHAR(5)
+);
+
+INSERT INTO student 
+ 
+    VALUES
+        (1,'dhanuka',   'A', 95, 'm'),
+        (2,'navith',    'A', 75, 'p'),
+        (3,'sashika',   'A', 76, 'm'),
+        (4,'sahan',     'B', 64, 'm'),
+        (5,'nimal',     'C', 58, 'm'),
+        (1,'dhanuka',   'B', 68, 'p'),
+        (2,'navith',    'B', 69, 'm'),
+        (5,'nimal',     'S', 46, 'p');
+
+
+SELECT * from student WHERE name LIKE '%a';
+SELECT * from student WHERE name LIKE 's%';
+SELECT * from student WHERE name LIKE '_____';
+SELECT * from student WHERE name LIKE 'nav___';
+
+
+SELECT * FROM student WHERE subject = 'm' AND grade = 'A';
+
+SELECT id, name FROM student WHERE subject = 'm' AND grade = 'A';
+
+SELECT AVG(mark) FROM student WHERE subject = 'm' AND grade = 'A';
+
+SELECT SUM(mark) FROM student WHERE subject = 'm' AND grade = 'A';
+
+SELECT MIN(mark) FROM student WHERE subject = 'm' AND grade = 'A';
+
+SELECT MAX(mark) FROM student WHERE subject = 'm' AND grade = 'A';
+
+
+
+
+SELECT subject, count(name) FROM student GROUP BY subject;
+
+
+UPDATE 
+    student
+SET 
+    name = 'nilkamal',
+    subject = 'ict'
+WHERE
+    id = 5;
+
+    

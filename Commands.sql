@@ -382,7 +382,7 @@
     --------------------------------------------------------------------*/
 
     -- Operation Order
-        -- FROM -> WHERE -> GROUP BY -> HAVING->  SELECT -> DISTINCT -> ORDER BY -> LIMIT
+        -- FROM -> WHERE -> GROUP BY -> HAVING ->  SELECT -> DISTINCT -> ORDER BY -> LIMIT
 
     -- SELECT ALL
         SELECT * 
@@ -409,7 +409,18 @@
         GROUP BY 
             group_by_expression;
     
-      
+    -- SELECT with Having
+        
+        SELECT 
+            column_name_1, column_name_2
+        FROM 
+            table_name
+        WHERE 
+            condition
+        GROUP BY 
+            group_by_expression;
+        HAVING 
+            group_condition;
 
     -- SELECT with distinct rows
         
