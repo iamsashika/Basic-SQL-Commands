@@ -417,3 +417,13 @@ WHERE
     INNER JOIN
         department
     ON student.d_id = department.d_id;  
+
+
+
+    CREATE TABLE st (
+        id INT(5),
+        name VARCHAR(10),
+        grade VARCHAR(10),
+        mark INT(5),
+        subject VARCHAR(5)
+);
